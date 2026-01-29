@@ -41,3 +41,10 @@ Example URL: # https://www.google.com/search?q=bananas
     * q == query (just a variable name)
     * ? == start of query
     * what comes after = is Dynamic_Value (client input)
+
+## Pydantic
+* Uses schema (Defines Logical data type structure)
+* Class based
+* Used for Data Validation
+* Facilitates conversion of JSON -> Python objects
+* Best pratice - (seperated from its own package)
