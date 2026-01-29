@@ -10,11 +10,11 @@
  * install: $ pip install "fastapi[standard]"
  * Keep main.py in root folder
     * List pro
-    * BONUS: alternative for performance: $ uv pip install "fastapi[standard]"
-    * BONUS: CTRL + F 
-    * BONUS: To verify packages installed $ pip list
-    * START APP: $ fastapi dev FILENAME.py
-        * IMPORTANT: stand in the same folder as main.py 
+    * **BONUS:** alternative for performance: $ uv pip install "fastapi[standard]"
+    * **BONUS:** CTRL + F 
+    * **BONUS:** To verify packages installed $ pip list
+    * **START APP:** $ fastapi dev FILENAME.py
+        * **IMPORTANT:** stand in the same folder as main.py 
 
 
 ## Endpoint
@@ -48,3 +48,4 @@ Example URL: # https://www.google.com/search?q=bananas
 * Used for Data Validation
 * Facilitates conversion of JSON -> Python objects
 * Best pratice - (seperated from its own package)
+* Includes 'BaseModel' within class parameters
