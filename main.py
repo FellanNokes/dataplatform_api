@@ -1,7 +1,7 @@
 import requests
 
 from typing import Union
-from fastapi import FastAPI, status
+from fastapi import FastAPI, status, HTTPException
 
 from schema.fox import FoxSchema
 from schema.user import UserSchema, UserSchemaResponse
@@ -35,6 +35,18 @@ def get_users() -> list[UserSchemaResponse]:
 def post_user(user: UserSchema) -> UserSchema:
     userList.append(user)
     return user
+
+@app.delete("/users/{username}", status_code=status.HTTP_200_OK)
+def delete_user(username: str) -> dict[str, str]:
+    for user in userList:
+        if user.username == username:
+            userList.remove(user)
+            return {"message": "User deleted"}
+
+    raise HTTPException(
+        status_code=status.HTTP_404_NOT_FOUND,
+        detail="User not found"
+    )
 
 @app.get("/fox", response_model=FoxSchema)
 def get_fox() -> FoxSchema:

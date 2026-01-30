@@ -1,6 +1,6 @@
 # Deletion of name - why?
 
-## servlet container
+## Servlet container
  - Hosting of application (locally)
  - FastApi introduces this new concept
  - Removes traditional 'play/start' button
